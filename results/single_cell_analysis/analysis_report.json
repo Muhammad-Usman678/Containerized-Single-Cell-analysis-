@@ -1,0 +1,26 @@
+{
+  "dataset_info": {
+    "total_cells": 2700,
+    "total_genes": 13714,
+    "highly_variable_genes": 2000,
+    "clusters": 8
+  },
+  "qc_metrics": {
+    "mean_genes_per_cell": 845.5466666666666,
+    "median_genes_per_cell": 816.0,
+    "mean_counts_per_cell": 1713.12353515625,
+    "median_counts_per_cell": 1703.5791015625,
+    "mean_mt_percentage": 1.4758492708206177,
+    "median_mt_percentage": 1.4306485652923584
+  },
+  "cluster_composition": {
+    "0": 1047,
+    "1": 497,
+    "2": 345,
+    "3": 329,
+    "4": 170,
+    "5": 164,
+    "6": 115,
+    "7": 33
+  }
+}

@@ -1,0 +1,163 @@
+# Python# Byte-compiled / optimized / DLL files
+
+__pycache__/__pycache__/
+
+*.py[cod]*.py[cod]
+
+*$py.class*$py.class
+
+*.so
+
+.Python# C extensions
+
+*.egg*.so
+
+*.egg-info/
+
+dist/# Distribution / packaging
+
+build/.Python
+
+*.whlbuild/
+
+develop-eggs/
+
+# Virtual environmentsdist/
+
+venv/downloads/
+
+env/eggs/
+
+ENV/.eggs/
+
+.venvlib/
+
+lib64/
+
+# IDEsparts/
+
+.vscode/sdist/
+
+.idea/var/
+
+*.swpwheels/
+
+*.swo*.egg-info/
+
+*~.installed.cfg
+
+*.egg
+
+# OSMANIFEST
+
+.DS_Store
+
+Thumbs.db# PyInstaller
+
+*.bak*.manifest
+
+*.spec
+
+# Data files (large)
+
+data/raw/*.h5ad# Unit test / coverage reports
+
+data/raw/*.h5htmlcov/
+
+data/raw/*.csv.tox/
+
+data/processed/.coverage
+
+.coverage.*
+
+# Results (generated).cache
+
+results/nosetests.xml
+
+mlruns/coverage.xml
+
+models/*.pkl*.cover
+
+evaluation_results/.hypothesis/
+
+monitoring/reports/.pytest_cache/
+
+
+
+# Logs# Jupyter Notebook
+
+*.log.ipynb_checkpoints
+
+logs/
+
+# pyenv
+
+# Jupyter.python-version
+
+.ipynb_checkpoints/
+
+*.ipynb# Environments
+
+.env
+
+# Temporary files.venv
+
+*.tmpenv/
+
+.cache/venv/
+
+ENV/
+
+# Old project filesenv.bak/
+
+src/venv.bak/
+
+config.yml
+
+metrics_dashboard.html# IDEs
+
+compare_models.py.vscode/
+
+.idea/
+*.swp
+*.swo
+*~
+
+# MLflow
+mlruns/
+mlflow.db
+
+# Models
+models/*.pkl
+models/*.h5
+models/*.pt
+models/*.pth
+!models/.gitkeep
+
+# Data
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Logs
+*.log
+logs/
+
+# Monitoring
+monitoring/reports/*
+!monitoring/reports/.gitkeep
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+.~*
+
+# Docker
+.dockerignore
+docker-compose.override.yml

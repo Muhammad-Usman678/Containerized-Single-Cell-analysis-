@@ -1,0 +1,96 @@
+version: '3.8'version: '3.8'
+
+
+
+services:services:
+
+  sc-analysis:  # FastAPI Application
+
+    build: .  api:
+
+    image: single-cell-analysis:latest    build:
+
+    container_name: sc-rna-seq-analysis      context: .
+
+    volumes:      dockerfile: Dockerfile
+
+      - ./results:/app/results    container_name: cancer-mlops-api
+
+      - ./data:/app/data    ports:
+
+    environment:      - "8000:8000"
+
+      - PYTHONUNBUFFERED=1    volumes:
+
+    restart: "no"      - ./models:/app/models
+
+      - ./data:/app/data
+      - ./mlruns:/app/mlruns
+    environment:
+      - MLFLOW_TRACKING_URI=http://mlflow:5000
+      - MODEL_PATH=/app/models/best_model.pkl
+    depends_on:
+      - mlflow
+    networks:
+      - mlops-network
+    restart: unless-stopped
+
+  # MLflow Tracking Server
+  mlflow:
+    image: ghcr.io/mlflow/mlflow:latest
+    container_name: cancer-mlops-mlflow
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./mlruns:/mlflow/mlruns
+      - ./mlflow.db:/mlflow/mlflow.db
+    command: >
+      mlflow server
+      --backend-store-uri sqlite:///mlflow/mlflow.db
+      --default-artifact-root /mlflow/mlruns
+      --host 0.0.0.0
+      --port 5000
+    networks:
+      - mlops-network
+    restart: unless-stopped
+
+  # Prometheus for Metrics
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: cancer-mlops-prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus-data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+    networks:
+      - mlops-network
+    restart: unless-stopped
+
+  # Grafana for Visualization
+  grafana:
+    image: grafana/grafana:latest
+    container_name: cancer-mlops-grafana
+    ports:
+      - "3000:3000"
+    volumes:
+      - grafana-data:/var/lib/grafana
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_USERS_ALLOW_SIGN_UP=false
+    depends_on:
+      - prometheus
+    networks:
+      - mlops-network
+    restart: unless-stopped
+
+networks:
+  mlops-network:
+    driver: bridge
+
+volumes:
+  prometheus-data:
+  grafana-data:
