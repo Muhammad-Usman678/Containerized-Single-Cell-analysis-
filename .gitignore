@@ -1,50 +1,97 @@
-# Python# Byte-compiled / optimized / DLL files
+# Python# Python# Byte-compiled / optimized / DLL files
 
-__pycache__/__pycache__/
+__pycache__/
 
-*.py[cod]*.py[cod]
+*.py[cod]__pycache__/__pycache__/
 
-*$py.class*$py.class
+*$py.class
 
-*.so
+*.so*.py[cod]*.py[cod]
 
-.Python# C extensions
+.Python
 
-*.egg*.so
+*.egg*$py.class*$py.class
 
 *.egg-info/
 
+dist/*.so
+
+build/
+
+.Python# C extensions
+
+# Virtual environments
+
+venv/*.egg*.so
+
+env/
+
+ENV/*.egg-info/
+
+.venv
+
 dist/# Distribution / packaging
 
-build/.Python
+# IDEs
 
-*.whlbuild/
+.vscode/build/.Python
+
+.idea/
+
+*.swp*.whlbuild/
+
+*.swo
 
 develop-eggs/
 
-# Virtual environmentsdist/
+# OS
+
+.DS_Store# Virtual environmentsdist/
+
+Thumbs.db
 
 venv/downloads/
 
-env/eggs/
+# Data files - ALL H5AD files are too large for GitHub
 
-ENV/.eggs/
+*.h5adenv/eggs/
+
+*.h5
+
+data/raw/ENV/.eggs/
+
+data/processed/
 
 .venvlib/
 
-lib64/
+# Results - keep only essential files
+
+results/single_cell_analysis/processed_data.h5adlib64/
+
+results/single_cell_analysis/marker_genes.csv
 
 # IDEsparts/
 
-.vscode/sdist/
+# Logs
+
+*.log.vscode/sdist/
+
+logs/
 
 .idea/var/
 
-*.swpwheels/
+# Jupyter
 
-*.swo*.egg-info/
+.ipynb_checkpoints/*.swpwheels/
 
-*~.installed.cfg
+
+
+# Temporary*.swo*.egg-info/
+
+*.tmp
+
+*.bak*~.installed.cfg
+
 
 *.egg
 
