@@ -1,191 +1,92 @@
-# Python# Python# Byte-compiled / optimized / DLL files
-
+# Python
 __pycache__/
-
-*.py[cod]__pycache__/__pycache__/
-
+*.py[cod]
 *$py.class
-
-*.so*.py[cod]*.py[cod]
-
+*.so
 .Python
 
-*.egg*$py.class*$py.class
-
-*.egg-info/
-
-dist/*.so
-
-build/
-
-.Python# C extensions
-
-# Virtual environments
-
-venv/*.egg*.so
-
-env/
-
-ENV/*.egg-info/
-
-.venv
-
-dist/# Distribution / packaging
-
-# IDEs
-
-.vscode/build/.Python
-
-.idea/
-
-*.swp*.whlbuild/
-
-*.swo
-
-develop-eggs/
-
-# OS
-
-.DS_Store# Virtual environmentsdist/
-
-Thumbs.db
-
-venv/downloads/
-
-# Data files - ALL H5AD files are too large for GitHub
-
-*.h5adenv/eggs/
-
-*.h5
-
-data/raw/ENV/.eggs/
-
-data/processed/
-
-.venvlib/
-
-# Results - keep only essential files
-
-results/single_cell_analysis/processed_data.h5adlib64/
-
-results/single_cell_analysis/marker_genes.csv
-
-# IDEsparts/
-
-# Logs
-
-*.log.vscode/sdist/
-
-logs/
-
-.idea/var/
-
-# Jupyter
-
-.ipynb_checkpoints/*.swpwheels/
-
-
-
-# Temporary*.swo*.egg-info/
-
-*.tmp
-
-*.bak*~.installed.cfg
-
-
+# Distribution / packaging
 *.egg
+*.egg-info/
+dist/
+build/
+develop-eggs/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.whl
+.installed.cfg
+MANIFEST
 
-# OSMANIFEST
-
-.DS_Store
-
-Thumbs.db# PyInstaller
-
-*.bak*.manifest
-
+# PyInstaller
+*.manifest
 *.spec
 
-# Data files (large)
-
-data/raw/*.h5ad# Unit test / coverage reports
-
-data/raw/*.h5htmlcov/
-
-data/raw/*.csv.tox/
-
-data/processed/.coverage
-
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
 .coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
 
-# Results (generated).cache
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
 
-results/nosetests.xml
-
-mlruns/coverage.xml
-
-models/*.pkl*.cover
-
-evaluation_results/.hypothesis/
-
-monitoring/reports/.pytest_cache/
-
-
-
-# Logs# Jupyter Notebook
-
-*.log.ipynb_checkpoints
-
-logs/
-
-# pyenv
-
-# Jupyter.python-version
-
-.ipynb_checkpoints/
-
-*.ipynb# Environments
-
+# Environments
 .env
-
-# Temporary files.venv
-
-*.tmpenv/
-
-.cache/venv/
-
+.venv
+env/
+venv/
 ENV/
+env.bak/
+venv.bak/
 
-# Old project filesenv.bak/
-
-src/venv.bak/
-
-config.yml
-
-metrics_dashboard.html# IDEs
-
-compare_models.py.vscode/
-
+# IDEs
+.vscode/
 .idea/
 *.swp
 *.swo
 *~
 
+# Data files (too large for GitHub - all excluded)
+data/
+!data/.gitkeep
+!data/raw/
+!data/raw/.gitkeep
+!data/processed/
+!data/processed/.gitkeep
+
+# Results (generated, exclude all except docs/)
+results/
+!results/.gitkeep
+
+# GitHub Pages (KEEP these - will be pushed)
+!docs/
+!docs/**
+
 # MLflow
 mlruns/
 mlflow.db
+*.db
 
-# Models
+# Models (too large)
 models/*.pkl
 models/*.h5
 models/*.pt
 models/*.pth
 !models/.gitkeep
-
-# Data
-data/raw/*
-data/processed/*
-!data/raw/.gitkeep
-!data/processed/.gitkeep
 
 # Logs
 *.log
@@ -202,9 +103,8 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.bak
-*.swp
+.cache/
 .~*
 
 # Docker
-.dockerignore
 docker-compose.override.yml

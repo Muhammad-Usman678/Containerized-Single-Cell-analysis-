@@ -1,0 +1,72 @@
+# Python__pycache__/
+
+__pycache__/*.pyc
+
+*.py[cod].Python
+
+*$py.classvenv/
+
+*.so.env
+
+.Python.git/
+
+*.egg-info/.gitignore
+
+dist/.pytest_cache/
+
+build/.coverage
+
+htmlcov/
+
+# Virtual environments*.egg-info/
+
+venv/dist/
+
+env/build/
+
+ENV/.vscode/
+
+.idea/
+
+# IDEs*.log
+
+.vscode/tests/
+
+.idea/docs/
+
+*.swp*.md
+
+*.swo!README.md
+
+.github/
+
+# OSnotebooks/
+
+.DS_Storedata/raw/
+
+Thumbs.dbevaluation_results/
+
+
+# Data and results (keep local only)
+data/
+results/
+mlruns/
+models/
+evaluation_results/
+monitoring/reports/
+
+# Logs
+*.log
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Git
+.git/
+.gitignore
+
+# Old files
+src/
+config.yml
+metrics_dashboard.html
